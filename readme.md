@@ -1,66 +1,37 @@
-# Blank Solito Example Monorepo 🕴
+# 🦊 F.O.X
 
-```sh
-npx create-solito-app@latest my-solito-app
-```
+**F** – Future-ready
+**O** – Open & Cross-platform
+**X** – eXpressive
 
-👾 [View the website](https://example.solito.dev)
+## 🔦 Sobre
 
-## ⚡️ Instantly clone & deploy
+Um aplicativo para **expressar ideias e criatividade** com foco na comunidade **Gamer**.
+Construído em um monorepo moderno com **Expo + Next.js**.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnandorojo%2Fsolito%2Ftree%2Fmaster%2Fexample-monorepos%2Fblank&env=ENABLE_ROOT_PATH_BUILD_CACHE&root-directory=apps/next&envDescription=Set%20this%20environment%20variable%20to%201%20for%20Turborepo%20to%20cache%20your%20node_modules.&envLink=https%3A%2F%2Ftwitter.com%2Fjaredpalmer%2Fstatus%2F1488954563533189124&project-name=solito-app&repo-name=solito-app&demo-title=Solito%20App%20%E2%9A%A1%EF%B8%8F&demo-description=React%20Native%20%2B%20Next.js%20starter%20with%20Solito.%20Made%20by%20Fernando%20Rojo.&demo-url=https%3A%2F%2Fsolito.dev%2Fstarter&demo-image=https%3A%2F%2Fsolito.dev%2Fimg%2Fog.png&build-command=cd+..%2F..%3Bnpx+turbo+run+build+--filter%3Dnext-app)
+## 📦 Tecnologias principais
 
-## 🔦 About
-
-This monorepo is a blank(ish) starter for an Expo + Next.js app.
-
-While it's pretty barebones, it does a lot of the annoying config for you. The folder structure is opinionated, based on my long experience building for this stack.
-
-## 📦 Included packages
-
-- `solito` for cross-platform navigation
-- `moti` for animations
-- Expo SDK 53
-- Next.js 15
-- React Navigation 7
-- React 19 (read more below)
-- React Compiler
+- ⚡ Expo SDK 53 (mobile)
+- ⚡ Next.js 15 (web)
+- ⚡ React 19 + React Compiler
+- ⚡ Solito (navegação cross-platform)
+- ⚡ Moti (animações fluidas)
+- ⚡ React Navigation 7
 
 For more, see the [compatibility docs](https://solito.dev/compatibility).
 
-## 🗂 Folder layout
+## 🏁 Executar
 
-- `apps` entry points for each app
+- Instale o package manager: `yarn`
 
-  - `expo`
-  - `next`
+- Para rodar a Web (NextJS) execute: `yarn web`
+  - Depois disso vai ser executado automaticamente: `cd apps/next && yarn next`
+- Para rodar a Nativo (Expo) execute: `yarn mob`
+  - Depois disso vai ser executado automaticamente: `cd apps/expo && yarn start`
 
-- `packages` shared packages across apps
-  - `app` you'll be importing most files from `app/`
-    - `features` (don't use a `screens` folder. organize by feature.)
-    - `provider` (all the providers that wrap the app, and some no-ops for Web.)
-    - `navigation` Next.js has a `pages/` folder. React Native doesn't. This folder contains navigation-related code for RN. You may use it for any navigation code, such as custom links.
+## 🆕 Adicionar dependências
 
-You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
-
-## 🏁 Start the app
-
-- Install dependencies: `yarn`
-
-- Next.js local dev: `yarn web`
-  - Runs `yarn next`
-- Expo local dev:
-  - First, build a dev client onto your device or simulator
-    - `cd apps/expo`
-    - Then, either `expo run:ios`, or `eas build`
-  - After building the dev client, from the root of the monorepo...
-    - `yarn native` (This runs `expo start --dev-client`)
-
-## 🆕 Add new dependencies
-
-### Pure JS dependencies
-
-If you're installing a JavaScript-only dependency that will be used across platforms, install it in `packages/app`:
+### Dependências (cross platform)
 
 ```sh
 cd packages/app
@@ -69,9 +40,7 @@ cd ../..
 yarn
 ```
 
-### Native dependencies
-
-If you're installing a library with any native code, you must install it in `apps/expo`:
+### Dependências Nativas
 
 ```sh
 cd apps/expo
@@ -81,15 +50,16 @@ cd ../..
 yarn
 ```
 
-You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
+## 📌 Roadmap
 
-## 🎙 About the creator
+- 🔥 Autenticação de usuários
+- 🔥 Perfil com customização gamer
+- 🔥 Sistema de posts (texto, imagem, vídeo)
+- 🔥 Integração com comunidade web + mobile
+- 🔥 Avatares 3D (com threejs)
+- 🔥 Sistema de live (compartilhar tela quando esta jogando)
 
-Follow Fernando Rojo on Twitter: [@FernandoTheRojo](https://twitter.com/fernandotherojo)
+## 🎙 Créditos
 
-## 🧐 Why use Expo + Next.js?
-
-See my talk about this topic at Next.js Conf 2021:
-
-<a href="https://www.youtube.com/watch?v=0lnbdRweJtA"><img width="1332" alt="image" src="https://user-images.githubusercontent.com/13172299/157299915-b633e083-f271-48c6-a262-7b7eef765be5.png">
-</a>
+Baseado no boilerplate Solito criado por Fernando Rojo
+Customizado e expandido para o F.O.X 🦊.
