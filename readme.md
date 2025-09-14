@@ -18,8 +18,6 @@ Construído em um monorepo moderno com **Expo + Next.js**.
 - ⚡ Moti (animações fluidas)
 - ⚡ React Navigation 7
 
-For more, see the [compatibility docs](https://solito.dev/compatibility).
-
 ## 🏁 Executar
 
 - Instale o package manager: `yarn`
