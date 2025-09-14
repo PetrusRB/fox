@@ -1,0 +1,55 @@
+{
+  "name": "joy",
+  "description": "Uma rede social com um nicho de Games.",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@expo/ngrok": "^4.1.0",
+    "@types/react": "^18.2.21",
+    "eslint": "^8.21.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "turbo": "^2.4.4",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "mob": "cd apps/expo && yarn start",
+    "web": "cd apps/next && yarn next"
+  },
+  "packageManager": "yarn@4.7.0",
+  "eslintConfig": {
+    "extends": "next",
+    "settings": {
+      "next": {
+        "rootDir": "apps/next/"
+      }
+    },
+    "root": true
+  },
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@clerk/clerk-expo": "^2.14.30",
+    "@clerk/nextjs": "^6.31.10",
+    "@expo/vector-icons": "^15.0.2",
+    "@native-base/next-adapter": "^2.3.0",
+    "@react-native-vector-icons/ionicons": "^12.3.0",
+    "autoprefixer": "^10.4.21",
+    "clsx": "^2.1.1",
+    "expo-blur": "^14.1.5",
+    "lottie-react": "^2.4.1",
+    "lottie-react-native": "^7.3.4",
+    "react-icons": "^5.5.0",
+    "react-native-blurhash": "^2.1.2",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "5.4.0",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^3.25.67"
+  }
+}

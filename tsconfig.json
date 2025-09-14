@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "module": "esnext",
+    "strict": true,
+    "isolatedModules": true,
+    "jsxImportSource": "nativewind",
+    "paths": {
+      "app/*": ["./packages/app/*"]
+    },
+    "jsx": "preserve"
+  },
+  "extends": "expo/tsconfig.base"
+}

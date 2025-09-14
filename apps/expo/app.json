@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "fox",
+    "slug": "fox",
+    "version": "1.0.0",
+    "scheme": "fox",
+    "platforms": ["ios", "android"],
+    "icon": "./assets/images/logo.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "web": {
+      "bundler": "metro"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "app.binary.fox"
+    },
+    "ios": {
+      "bundleIdentifier": "com.binary.fox"
+    },
+    "newArchEnabled": true,
+    "experiments": {
+      "reactCanary": true,
+      "reactCompiler": true
+    }
+  }
+}
